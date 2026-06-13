@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 3, 7, 18;
+  --background-end-rgb: 0, 0, 0;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      rgb(var(--background-start-rgb)),
+      rgb(var(--background-end-rgb))
+    );
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Cybernetic Technical HUD styling utilities */
+@layer utilities {
+  .text-glow-orange {
+    text-shadow: 0 0 10px rgba(234, 88, 12, 0.4), 0 0 20px rgba(234, 88, 12, 0.2);
+  }
+  
+  .text-glow-cyan {
+    text-shadow: 0 0 10px rgba(6, 182, 212, 0.4), 0 0 20px rgba(6, 182, 212, 0.2);
+  }
+
+  .box-glow-orange {
+    box-shadow: 0 0 15px rgba(234, 88, 12, 0.25);
+    border-color: rgba(234, 88, 12, 0.5);
+  }
+
+  .box-glow-cyan {
+    box-shadow: 0 0 15px rgba(6, 182, 212, 0.25);
+    border-color: rgba(6, 182, 212, 0.5);
+  }
+}
+
+/* Customized Technical HUD Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(3, 7, 18, 0.9);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(234, 88, 12, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(234, 88, 12, 0.6);
+}
+
+/* Glassmorphism backing styles */
+.glass-panel {
+  background: rgba(17, 24, 39, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel:hover {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}

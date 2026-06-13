@@ -1,0 +1,12 @@
+# Ignore local Node dependencies and cache directories for Cloud Run deployments
+node_modules/
+.next/
+out/
+build/
+.git/
+.gitignore
+.gcloudignore
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+.env*.local
